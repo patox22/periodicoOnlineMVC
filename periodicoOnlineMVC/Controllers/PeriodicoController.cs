@@ -13,5 +13,12 @@ namespace periodicoOnlineMVC.Controllers
         {
             return View();
         }
+
+        public ActionResult ListaNoticia()
+        {
+            return View();
+        }
+
+
     }
 }
