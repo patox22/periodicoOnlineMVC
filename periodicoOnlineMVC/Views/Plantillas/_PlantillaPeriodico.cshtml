@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Page.Title</title>
+    @RenderSection("head", required: false)
+    
+    @Styles.Render("~/Content/estiloPeriodico")
+ 
+
+</head>
+<body>
+
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+            <div id="hgroup">
+                <h1><a href="#">Nombre</a></h1>
+                <h2>Slogan</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.aspx">Home</a></li>
+                    <li><a href="../listaDeNoticias.aspx">Noticias</a></li>
+                    <li><a href="../listaNoticiasMedianas.aspx">Blog</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    <li class="last"><a href="#">Link 5</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="wrapper row2">
+        <div id="container" class="clear">
+
+
+           @if (IsSectionDefined("regionSlider"))
+           {
+               @RenderSection("regionSlider")
+           }
+           else
+           {
+            <section id="slider"><a href="#"><img src="../images/960x360.gif" alt="" /></a></section>
+           }
+
+          
+
+
+            <div id="homepage">
+
+
+                @if (IsSectionDefined("regionNoticiasPequenas"))
+                {
+                    @RenderSection("regionNoticiasPequenas")
+                }
+                else
+                {
+                    <section id="services" class="clear">
+                        <article class="one_third">
+                            <figure>
+                                <img src="../images/290x180.gif" width="290" height="180" alt="" />
+                                <figcaption>
+                                    <h2>Ejemplo de Noticia 1</h2>
+                                    <p>&Eacute;ste es el ejemplo de una posible noticia. no es obligaci&oacute;n que sea una noticia real.</p>
+                                    <footer class="more"><a href="../noticiaCompleta.aspx">Leer M&aacute;s &raquo;</a></footer>
+                                </figcaption>
+                            </figure>
+                        </article>
+                        <article class="one_third">
+                            <figure>
+                                <img src="../images/290x180.gif" width="290" height="180" alt="" />
+                                <figcaption>
+                                    <h2>Ejemplo de Noticia 2</h2>
+                                    <p>&Eacute;ste&Eacute;ste es el ejemplo de una posible noticia. no es obligaci&oacute;n que sea una noticia real.</p>
+                                    <footer class="more"><a href="#">Leer M&aacute;sM&aacute;s &raquo;</a></footer>
+                                </figcaption>
+                            </figure>
+                        </article>
+                        <article class="one_third lastbox">
+                            <figure>
+                                <img src="../images/290x180.gif" width="290" height="180" alt="" />
+                                <figcaption>
+                                    <h2>Ejemplo de Noticia 3</h2>
+                                    <p>&Eacute;ste es el ejemplo de una posible noticia. no es obligaci&oacute;n que sea una noticia real.</p>
+                                    <footer class="more"><a href="#">Leer M&aacute;s &raquo;</a></footer>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </section>
+                }
+
+             
+                @if (IsSectionDefined("regionNoticiaMediana"))
+                {
+                    @RenderSection("regionNoticiaMediana")
+                }
+                else
+                {
+                    <section id="intro" class="last clear">
+                        <article>
+                            <figure>
+                                <img src="../images/450x250.gif" width="450" height="250" alt="" />
+                                <figcaption>
+                                    <h2>Anticipo de Noticia Importante</h2>
+                                    <p>&Eacute;ste es el ejemplo de una posible noticia. no es obligaci&oacuten que sea una noticia real.</p>
+                                    <p>Tambi&Eeacute;n puede ser un articulo interesante de lo que quieras contar, ojo, debe tener concordancia con el periodico que vas a crear. tambi&eacute;n puedes hacer referencia a alg&uacute;n <a href="#">Sitio Web</a> o <a href="#">Parte de la misma p&aacute;gina</a>.</p>
+                                    <footer class="more"><a href="#">Leer M&aacute;s &raquo;</a></footer>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </section>
+
+                }
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="wrapper row3">
+
+
+        @if (IsSectionDefined("regionGrupodeLink"))
+        {
+            @RenderSection("regionGrupodeLink")
+        }
+        else
+        {
+            <div id="footer" class="clear">
+                <!-- Seccion 1 -->
+                <section class="one_quarter">
+                    <h2 class="title">Link 1</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Ejemplo noticia 1</a></li>
+                            <li><a href="#">Ejemplo noticia 2</a></li>
+                            <li><a href="#">Ejemplo noticia 3</a></li>
+                            <li><a href="#">Ejemplo noticia 4</a></li>
+                            <li class="last"><a href="#">Ejemplo noticia 5</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <!-- Seccion 2 -->
+                <section class="one_quarter">
+                    <h2 class="title">Link 2</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Ejemplo noticia 1</a></li>
+                            <li><a href="#">Ejemplo noticia 2</a></li>
+                            <li><a href="#">Ejemplo noticia 3</a></li>
+                            <li><a href="#">Ejemplo noticia 4</a></li>
+                            <li class="last"><a href="#">Ejemplo noticia 5</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <!-- Seccion 3 -->
+                <section class="one_quarter">
+                    <h2 class="title">Link 3</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Ejemplo noticia 1</a></li>
+                            <li><a href="#">Ejemplo noticia 2</a></li>
+                            <li><a href="#">Ejemplo noticia 3</a></li>
+                            <li><a href="#">Ejemplo noticia 4</a></li>
+                            <li class="last"><a href="#">Ejemplo noticia 5</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <!-- Seccion 4 -->
+                <section class="one_quarter lastbox">
+                    <h2 class="title">Link 4</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Ejemplo noticia 1</a></li>
+                            <li><a href="#">Ejemplo noticia 2</a></li>
+                            <li><a href="#">Ejemplo noticia 3</a></li>
+                            <li><a href="#">Ejemplo noticia 4</a></li>
+                            <li class="last"><a href="#">Ejemplo noticia 5</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <!-- / Seccion -->
+            </div>
+        }
+    </div>
+    <!-- Copyright -->
+    <div class="wrapper row4">
+        <footer id="copyright" class="clear">
+            <p class="fl_left">Copyright &copy; 2016 - Todos Los Derechos Reservados - <a href="#">Nombre-Apellido</a></p>
+            <p class="fl_right"><a href="../homeAdmin/homeAdmin.aspx">Acceso Administrador</a></p>
+        </footer>
+    </div>
+
+    @RenderBody()
+
+</body>
+</html>
